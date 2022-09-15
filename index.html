@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="robots" content="index, follow">
+     <meta name="description" content="Entrainement à la validation avec une carte bancaire">
+     <link rel="stylesheet" href="style.css">
+     <title>Card Validation</title>
+</head>
+
+<body>
+
+<div class="container">
+     <div class="content-card">
+          <img src="card-one.PNG" alt="face avant d'une carte bancaire">
+          <img src="card-two.PNG" alt="face arriere d'une carte bancaire">
+     </div>
+     
+     <div class="content-info">
+          <form>
+               <label for="name">Cardholeder name</label>
+               <input type="text" id="name" placeholder="e.g Jane Appleseed">
+               <span class="msg-error-name"></span>
+     
+               <label for="number">Card Number</label>
+               <input type="number" id="number" placeholder="e.g 1234 5678 9123 0000">
+               <span class="msg-error-number"></span>
+     
+               <div class="card-info">
+                    <div class="exp">
+                         <label for="expir">Exp. Date (MM/YY)</label>
+                         <div class="date">
+                              <input type="number" id="expir" placeholder="MM" class="month" min="0" max="31">
+                              <input type="number" placeholder="YY" class="year" min="22">
+                         </div>
+                         <span class="msg-error-date"></span>
+                    </div>
+               
+                    <div class="crypto">
+                         <label for="cvc">CVC</label>
+                         <input type="number" id="cvc" placeholder="e.g 123">
+                         <span class="msg-error-crypto"></span>
+                    </div>
+               </div>
+     
+               <button type="submit">Confirm</button>
+          </form>
+
+          <div class="form-info"></div>
+     </div>
+</div>     
+
+
+<script src="script.js"></script>
+</body>
+</html>
