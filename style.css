@@ -38,23 +38,24 @@
 .card-number{
      position: absolute;
      top: 29%;
-     left: 17%;
+     right: -5%;
 }
 .card-name{
      position: absolute;
      top: 39%;
-     left: 12%;
+     left: 40%;
      font-size: 17px;
 }
 .card-date{
      position: absolute;
      top: 39%;
-     left: 28%;
+     right: -5%;
+     font-size: 15px;
 }
 .card-crypto-num{
      position: absolute;
      top: 61%;
-     left: 34%;
+     right: -20%;
 }
 .content-info{
      min-width: 50%;
@@ -140,6 +141,17 @@ form.active{
           transform: translateX(5px);
      }
 }
+@media screen and (max-width: 1205px) {
+     .card-number{
+          right: -33%;
+     }
+     .card-date{
+          right: -33%;
+     }
+     .card-crypto-num{
+          right: -40%;
+     }
+}
 @media screen and (max-width: 950px) {
      .content-card img:nth-child(1){
           top: 25%;
@@ -148,11 +160,28 @@ form.active{
      .content-card img:nth-child(2) {
           left: 40%;
      }
+     .card-number{
+          top: 33%;
+          right: -37%;
+     }
+     .card-name{
+          top: 44%;
+          left: 30%;
+     }
+     .card-date{
+          top: 44%;
+          right: -37%;
+     }
+     .card-crypto-num{
+          right: -50%;
+     }
 }
 @media screen and (max-width: 920px) {
      .container{
           display: flex;
           flex-direction: column;
+          width: 100vw;
+          overflow-x: hidden;
      }
      .content-card{
           height: 30vh;
@@ -160,9 +189,58 @@ form.active{
      .content-card img:nth-child(1){
           z-index: 100;
      }
+     .card-number{
+          z-index: 150;
+          top: 55%;
+          left: 30%;
+     }
+     .card-name{
+          z-index: 150;
+          top: 95%;
+          left: 22%;
+     }
+     .card-date{
+          z-index: 150;
+          top: 95%;
+          left: 52%;
+     }
+     .card-crypto-num{
+          z-index: 150;
+          top: 86%;
+          left: 71%;
+     }
      .content-info{
           height: 60vh;
           padding: 150px 100px;
+     }
+}
+@media screen and (max-width : 770px) {
+     .card-number{
+          left: 35%;
+     }
+     .card-name{
+          left: 22%;
+     }
+     .card-date{
+          left: 60%;
+     }
+     .card-crypto-num{
+          left: 78%;
+     }
+}
+@media screen and (max-width : 660px) {
+     .card-number{
+          left: 35%;
+     }
+     .card-name{
+          left: 22%;
+     }
+     .card-date{
+          left: 59%;
+     }
+     .card-crypto-num{
+          left: 67%;
+          display: none;
      }
 }
 @media screen and (max-width: 620px) {
