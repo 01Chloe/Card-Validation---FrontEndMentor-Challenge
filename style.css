@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
 *, ::before, ::after{
      box-sizing: border-box;
@@ -28,6 +29,32 @@
      left: 55%;
      border-radius: 8px;
      box-shadow: 5px 5px 15px rgba(45, 0, 45, 0.3);
+}
+.number-card-one, .number-card-two{
+     font-family: 'Open Sans', sans-serif;
+     font-size: 20px;
+     color: #f1f1f1;
+}
+.card-number{
+     position: absolute;
+     top: 29%;
+     left: 17%;
+}
+.card-name{
+     position: absolute;
+     top: 39%;
+     left: 12%;
+     font-size: 17px;
+}
+.card-date{
+     position: absolute;
+     top: 39%;
+     left: 28%;
+}
+.card-crypto-num{
+     position: absolute;
+     top: 61%;
+     left: 34%;
 }
 .content-info{
      min-width: 50%;

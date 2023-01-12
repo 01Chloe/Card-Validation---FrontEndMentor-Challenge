@@ -1,6 +1,11 @@
 const form = document.querySelector('form')
 let regExpNumber = /[0-9]/
 
+let cardCryptoNum = document.querySelector('.card-crypto-num')
+let cardNumber = document.querySelector('.card-number')
+let cardName = document.querySelector('.card-name')
+let cardDate = document.querySelector('.card-date')
+
 //validation name
 const msgErrorName = document.querySelector('.msg-error-name')
 let nameChecker = false
@@ -64,8 +69,8 @@ function ckeckDateYear() {
           msgErrorDate.textContent = 'Requires 2 numbers'
           yearExpir.classList.add('active')
           dateYearChecker = false;
-     } else if(yearExpir.value <= 21) {
-          msgErrorDate.textContent = '22 years minimum'
+     } else if(yearExpir.value <= 22) {
+          msgErrorDate.textContent = '23 years minimum'
           yearExpir.classList.add('active')
           dateYearChecker = false;
      } 
@@ -115,4 +120,12 @@ function handleInfo(e) {
           form.classList.remove('active')
           formInfo.textContent = ""
      }, 1000)
+}
+
+submitBtn.addEventListener('click', showNumberOnCardImage)
+function showNumberOnCardImage() {
+     cardCryptoNum.textContent = form.cvc.value;
+     cardNumber.textContent = form.number.value;
+     cardName.textContent = form.name.value;
+     cardDate.textContent = form.expir.value + ' / ' + yearExpir.value;
 }
